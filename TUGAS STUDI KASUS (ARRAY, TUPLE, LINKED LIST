@@ -1,0 +1,39 @@
+
+# Bagian ARRAY
+Mahasiswa = ["Lindi", "Aziz", "Azmi", "Dinar"]
+
+# Bagian TUPLE
+identitas = ("Lindi", 20, "Informatika")
+
+# 3. Bagian LINKED LIST
+class Node:
+    def __init__(self, nama):
+        self.nama = nama
+        self.next = None
+
+a = Node("Lindi")
+b = Node("Aziz")
+c = Node("Azmi")
+
+a.next = b
+b.next = c
+
+print("=== SISTEM DATA MAHASISWA ===")
+
+print("\nDaftar Nama Mahasiswa:")
+for nama in Mahasiswa:
+    print(nama)
+
+print("\nIdentitas Mahasiswa:")
+print("Nama:", identitas[0])
+print("Umur:", identitas[1])
+print("Jurusan:", identitas[2])
+
+print("\nDaftar Mahasiswa yang Mengikuti Kegiatan Tambahan:")
+sekarang = a
+
+while sekarang:
+    print(sekarang.nama)
+    sekarang = sekarang.next
+
+print("\nProgram selesai.")
